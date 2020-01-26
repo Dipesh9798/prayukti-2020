@@ -3,6 +3,8 @@ var express = require("express");
 var path = require("path");
 var bodyParser = require("body-parser");
 var firebase = require("firebase");
+require('firebase/auth');
+require('firebase/messaging');
 
 
 var Config = {

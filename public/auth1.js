@@ -68,7 +68,7 @@ function sendOTPToMobile() {
 									console.log("OTP is Sent");
         
 									window.confirmationResult = confirmationResult;
-								})
+                                })
 								.catch(function(error) {
 									// Error; SMS not sent
 									// ...

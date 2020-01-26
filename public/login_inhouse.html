@@ -28,9 +28,16 @@
 			};
 			// Initialize Firebase
       firebase.initializeApp(Config);
+     
+    </script>
+    
+    <script src="auth2.js">
     </script>
 </head>
 <body>
+
+
+    
 
     <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
         <div class="container" >
@@ -63,24 +70,34 @@
       <div class="login">
 
           <div id="beforeotp">
-            <input type="number" name="mobile" id="number" placeholder="PHONE NUMBER">
-            <button id="b1" onclick="otpb()" type="submit">SEND OTP</button>
+            <input type="username" name="mobile" id="number" placeholder="PHONE NUMBER">
+            <div id="r1"></div>
+            <button id="b1" class="m-1" style="display: none;" onclick="otpb()" type="submit">SEND OTP</button>
           </div>
 
+          
+         
         
-          <div id="otp">
-              <input type="username" name="code" id="p_bar" placeholder="OTP">
-              <button type="submit" id="b2" >LOGIN</button>
+          <div id="otp" style="display: none;">
+              <input type="username" name="code" id="code" placeholder="OTP">
+              <button type="submit"  id="b2" onclick="codeVerify()" >LOGIN</button>
           </div>
       </div>
+     
       
       <script >
         function otpb(){
+          phoneAuth();
           document.getElementById("otp").style.display ="block";
 
           document.getElementById("beforeotp").style.display ="none";
+
+          document.getElementById("b1").style.display ="none";
+         
+         
 }
       </script>
+      
 </body>
 </html>
 
