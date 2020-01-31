@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/login.css">
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-     
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
 	  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
@@ -29,26 +29,26 @@
 			// Initialize Firebase
       firebase.initializeApp(Config);
      
-      const db =firebase.firestore()
+      //const db =firebase.firestore()
     </script>
 
     
     <script src="auth2.js">
     </script>
-    <script src="app.js"></script>
+    <!---<script src="app.js"></script>--->
 </head>
 <body>
-
-
-    
 
     <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
         <div class="container" >
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain" style="background:#dad7d7">
-    
+
+
         Menu <i class="fa fa-bars"></i>
-    
+
+        Menu <i class="fa fa-bars"></i>
+
         </button>
             <a href="#" style="color: #000000;text-decoration:none"><img style="max-width: 200px; max-height:auto; display: flex; opacity: 0.5;" src="img/newsky/white.png" alt="Prayukti"> </a>
           </div>
@@ -61,46 +61,68 @@
                                   <li><a class="navv home" href="riviera.html"><h5>Riviera</h5></a></li>
                                   <li><a style="left: 50px;" href="registration.html"><h5>Register&nbsp;|</h5></a></li>
                                   <!--<li><a href="#about" class="navv about">About Us</a></li>
-    
+<<<<<<< HEAD
+
               <li><a class="navv contact">Contact Us</a></li>
                               </ul>-->
           </div>
-          
+
         </div>
       </div>
-    
 
-      <div class="login">
+
+
+
+        </div>
+      </div>
+
+
+     <!---- <div class="login">
 
           <div id="beforeotp">
-            <input type="username" name="mobile" id="number" placeholder="PHONE NUMBER">
-            <div id="r1"></div>
-            <button id="b1" class="m-1" style="display: none;" onclick="otpb()" type="submit">SEND OTP</button>
+            <input type="username" placeholder="PHONE NUMBER">
+            <button id="b1" onclick="otpb()" type="submit">SEND OTP</button>
           </div>
 
-          
-         
-        
-          <div id="otp" style="display: none;">
-              <input type="username" name="code" id="code" placeholder="OTP">
-              <button type="submit"  id="b2" onclick="codeVerify()" >LOGIN</button>
+          <div id="otp">
+              <input type="username" placeholder="OTP">
+              <button type="submit" id="b2" >LOGIN</button>
           </div>
       </div>
-     
+
+      <script src="js/login.js"></script>
+
+      <script src="/Frontend/js/login.js"></script>
+      ---->
+      <div class="login">
+
+        <div id="beforeotp">
+          <input type="username" name="mobile" id="number" placeholder="PHONE NUMBER">
+          <div id="r1"></div>
+          <button id="b1" class="m-1" style="display: none;" onclick="otpb()" type="submit">SEND OTP</button>
+        </div>
+
+        
+       
       
-      <script >
-        function otpb(){
-          phoneAuth();
-          document.getElementById("otp").style.display ="block";
+        <div id="otp" style="display: none;">
+            <input type="username" name="code" id="code" placeholder="OTP">
+            <button type="submit"  id="b2" onclick="codeVerify()" >LOGIN</button>
+        </div>
+    </div>
+   
+    
+    <script >
+      function otpb(){
+        phoneAuth();
+        document.getElementById("otp").style.display ="block";
 
-          document.getElementById("beforeotp").style.display ="none";
+        document.getElementById("beforeotp").style.display ="none";
 
-          document.getElementById("b1").style.display ="none";
-         
-         
+        document.getElementById("b1").style.display ="none";
+       
+       
 }
-      </script>
-      
+    </script>
 </body>
 </html>
-

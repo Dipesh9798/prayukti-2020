@@ -6,6 +6,8 @@ var firebase = require("firebase");
 require('firebase/auth');
 require('firebase/messaging');
 require("firebase/firestore")
+// const router = express.Router();
+
 
 
 var Config = {
@@ -26,14 +28,18 @@ var dbRootRef = firebase.firestore();
 
 let app = express();
 
+//app.set('view engine','ejs');
+console.log("path");
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 //GET ROUTE for Home
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + "/index.html"));
-});
+router.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "/public/index.html"));
+}); 
 
 //GET ROUTE for Login
 
@@ -45,7 +51,7 @@ app.get("/login", (req, res) => {
       res.redirect("/account");
     } else {
       // No user is signed in.
-      res.sendFile(path.join(__dirname + "/login_inhouse.html"));
+      res.sendFile(path.join(__dirname + "/login.html"));
     }
   });
 });
@@ -73,14 +79,15 @@ app.post("/login", (req, res) => {
 
 //GET Route for Sign Up for HIT students 
 
-app.get("/signup", (req, res) => {
-  res.sendFile(path.join(__dirname + "/registration.html"));
+router.get("/signup", (req, res) => {
+  console.log("page displayed!")
+  res.sendFile(path.join(__dirname + "public/registration.html"));
 });
 
 // Sign Up for HIT POST ROUTE
 
 app.get("/signup/hit", (req, res) => {
-  res.sendFile(path.join(__dirname + "/login_inhouse.html"));
+  res.sendFile(path.join(__dirname + "public/login_inhouse.html"));
 });
 
 app.post("/signup/hit", (req, res) => {
@@ -177,6 +184,9 @@ app.post("/signup/hit", (req, res) => {
 
 
 });
+
+
+app.listen(3000)
 
 
 

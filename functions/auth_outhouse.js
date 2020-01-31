@@ -1,3 +1,8 @@
+
+
+/* eslint-disable promise/catch-or-return */
+/* eslint-disable promise/always-return */
+/* eslint-disable no-alert */
 window.onload=function(){
     render();
 };
@@ -30,7 +35,7 @@ function phoneAuth(){
     //
 
     firebase.auth().signInWithPhoneNumber("+91"+number,window.recaptchaVerifier)
-    .then(function(confirmationResult){
+    .then((confirmationResult) => {
         //
 
         window.confirmationResult=confirmationResult;
@@ -38,10 +43,12 @@ function phoneAuth(){
         console.log(coderesult);
         alert("Message sent");
     })
+    // eslint-disable-next-line prefer-arrow-callback
     .catch(function(error){
         alert(error.message);
     });
     recaptchaVerifier.render()
+    // eslint-disable-next-line prefer-arrow-callback
     .then(function(widgetId) {
         window.recaptchaWidgetId = widgetId;
     });
@@ -56,13 +63,24 @@ function codeVerify(){
     console.log("1"+number+" 1 "+code+"2");
 
     coderesult.confirm(code)
+    // eslint-disable-next-line prefer-arrow-callback
     .then(function(result){
-        alert("Successfully registered")
+        //alert("Successfully registered")
+
+       // document.getElementById("inhouse").style.display="block";
+
+document.getElementById('').style.visibility="hidden";
+document.getElementById('login').innerHTML = document.getElementById('inhouse').innerHTML;
         var user=result.user;
         console.log(user);
 
+        
+
     })
+    // eslint-disable-next-line prefer-arrow-callback
     .catch(function(error){
         alert(error.message)
     })
 }
+
+

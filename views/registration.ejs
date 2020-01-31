@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/registration.css">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  background-color: #333333;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+.button {
+  width : 200px;
+  height: 60px;
+  background:  none;
+  border: 4px solid;
+  color:#333333;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+
+}
+
+.button::before,.button::after{
+  content: "" ;
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  /* backgrnd clr will be same as skewr clr*/
+  background: rgb(255, 255, 255);
+  transform: skewX(60deg);
+  transition: .4s linear;
+}
+
+.button::before{
+  top :-4px;
+  left: 10%;
+
+}
+.button::after{
+  bottom: -4px;
+  right: 10%;
+}
+
+
+.button:hover::before {
+  opacity: .85;
+  left: 80%;
+  color: #dad7d7;
+  background-color:#333333 ;
+}
+
+
+.button:hover::after {
+  opacity: .85;
+  right: 80%;
+  
+  color: #dad7d7;
+  background-color:#333333 ;
+}
+
+
+
+
+
+
+      </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+        <div class="container" >
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain" style="background:#dad7d7">
+    
+        Menu <i class="fa fa-bars"></i>
+    
+        </button>
+            <a href="#" style="color: #000000;text-decoration:none"><img style="max-width: 200px; max-height:auto; display: flex; opacity: 0.5;" src="img/newsky/white.png" alt="Prayukti"> </a>
+          </div>
+          <div class="collapse navbar-collapse" id="navMain">
+            <ul class="nav navbar-nav pull-right">
+                                  <li><a class="navv home" href="#"><h5>Home</h5></a></li>
+                                  <li><a class="navv home" href="#home"><h5>About</h5></a></li>
+                                  <li><a class="navv home" href="events.html"><h5>Events</h5></a></li>
+                                  <li><a class="navv home" href="#home"><h5>Gallery</h5></a></li>
+                                  <li><a class="navv home" href="riviera.html"><h5>Riviera</h5></a></li>
+                                  <li><a style="left: 50px;" href="/signup"><h5>Register&nbsp;|</h5></a></li>
+                                  <!--<li><a href="#about" class="navv about">About Us</a></li>
+    
+              <li><a class="navv contact">Contact Us</a></li>
+                              </ul>-->
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="container1">
+        <a href="/signup/hit"><button id="button-1" class="button"><div id="circle" class="circle"></div>In-House</button></a>
+        <div class="push"></div>
+        <br><br>
+        <a href="login_outhouse.html"><button id="button-1" class="button"><div id="circle" class="circle"></div>Out-House</button></a>
+        <div class="push"></div>
+      </div>
+      
+      <!---<div class="container2">Already Registered? <a href="login.html">Login</a></div>---->
+      <!-- menu -->
+      <!-- circle with x in the middle -->
+</body>
+</html>

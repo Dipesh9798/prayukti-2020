@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://mdbootstrap.com/docs/jquery/forms/inputs/">
+	<!--End-->
+	<link rel="stylesheet" type="text/css" href="animate.css">
+</head>
+<body data-smooth-scroll-offset="0" >
+
+<style type="text/css">
+
+	.hsr{
+	display: none;
+}
+/* Style the buttons */
+.him {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.him:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.him.active {
+  background-color: #666;
+   color: white;
+}
+
+</style>
+
+<h1 style="text-align:center; color:grey">Registration Form</h1><br>
+<br>
+
+<div>
+  <button class="him " onclick="inhouse()">IN-HOUSE</button>
+  <button class="him" onclick="outhouse()">OUT HOUSE</button>
+
+
+<!--INHOUSE FORM-->
+<div id="main"></div>
+<div class="container" id="IN" style="display:none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-12">
+
+            </div>
+            <div class="col-md-8 col-lg-8 col-12" style="background-image: linear-gradient(to red, yellow , grey);">
+               <h3 style="text-align:center; color:grey">IN House Registration</h3><br>
+                <form>
+                    <input class="form-control" placeholder="Name" required="required" name="name" id="name" type="text" ><br>
+
+                    <input class="form-control" placeholder="Email" required="required" name="email" id="email" type="email"><br>
+                    <input class="form-control" placeholder="Mobile Number" required="required" name="mobile" id="mobile" type="number"><br>
+<div class="abcdef">
+<label for="gender">Gender</label><br>
+<input type="radio" name="gender" id="m" value="m" required>
+<label for="m">Male</label>&nbsp;&nbsp;
+<input type="radio" name="gender" id="f" value="f">
+<label for="f">Female</label>&nbsp;&nbsp;
+<input type="radio" name="gender" id="o" value="o">
+<label for="o">Others</label>
+</div>
+
+
+
+                    <label>Date of Birth</label>
+                    <input class="form-control" type="date" placeholder="Date of Birth" required="required" name="DOB" id="DOB"><br>
+                    <label>College Name</label>
+                    <input id="college" placeholder="Haldia Institute of Technology" required="required" class="form-control disabled" disabled><br>
+                    <label>Department</label>
+                    <select class="form-control inhouse" required="required">
+                        <option selected="selected" value="cse">Computer Science & Engineering</option>
+                        <option value="ece">Electronics and Communication Engineering</option>
+                        <option value="ee">Civil Engineering</option>
+                        <option value="">Electrical Engineering</option>
+                        <option value="sash">School Of Applied Science</option>
+                        <option value="che">Chemical Engineering</option>
+                        <option value="me">Mechanical Engineering</option>
+                        <option value="eie">Electronics & Instrumentation Eng.</option>
+                        <option value="ice">Instrumentation & Control Eng.</option>
+                        <option value="it">Information Technology</option>
+                        <option value="pe">Production Engineering</option>
+                        <option value="bt">Biotechnology</option>
+                        <option value="ft">Food Technology</option>
+
+                    </select><br>
+                                        <div class="abcdef">
+<!--<label for="roll">Roll Number</label><br>
+                        <select type="dropdown" name="year" id="y" >
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                        </select>
+<label>&nbsp / &nbsp</label>
+<select id="d" type="dropdown" name="dpt" class="form-control-inline">
+    <option>CSE</option>
+    <option>ECE</option>
+    <option>CE</option>
+    <option>EE</option>
+    <option>CHE</option>
+    <option>ME</option>
+    <option>IT</option>
+    <option>ICE</option>
+    <option>AEIE</option>
+    <option>PE</option>
+    <option>BT</option>
+    <option>FT</option>
+</select>
+<label>&nbsp; /</label>&nbsp;
+                        <input class="form-control-inline" type="number" max="250">
+</div>--><input type="text" class="form-control" id="roll" name="roll" required="required" placeholder="Roll Number e.g.(year/Department/Roll)"><br>
+
+                    <input type="text" class="form-control" placeholder="College ID (Optional)" name="CID" id="CID"><br>
+                                        <label>T-Shirt Size</label>
+                    <select class="form-control" id="tshirt">
+                        <option value="XS" selected="selected">XS</option><br>
+                        <option value="S">S</option><br>
+                        <option value="M">M</option><br>
+                        <option value="L">L</option><br>
+                        <option value="XL">XL</option><br>
+                        <option value="XXL">XXL</option><br>
+                    </select><br>
+                    <button class="btn btn-lg btn-primary" style="width:550px; ">Submit</button>
+                </form>
+
+            <div class="col-md-2 col-lg-2 col-12">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<!--Outhouse-->
+<div class="container" id="OUT"  style="display:none">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-12">
+
+            </div>
+            <div class="col-md-8 col-lg-8 col-12" style="background-image: linear-gradient(to red, yellow , grey);">
+               <h3 style="text-align:center; color:grey">OUT House Registration</h3><br>
+                <form>
+
+                    <input class="form-control" placeholder="Name" required="required" name="name" id="name" type="text" ><br>
+
+                    <input class="form-control" placeholder="Email" required="required" name="email" id="email" type="email"><br>
+                    <input class="form-control" placeholder="Mobile Number" required="required" name="mobile" id="mobile" type="number"><br>
+<div class="abcdef">
+<label for="gender">Gender</label><br>
+<input type="radio" name="gender" id="m" value="m" required>
+<label for="m">Male</label>&nbsp;&nbsp;
+<input type="radio" name="gender" id="f" value="f">
+<label for="f">Female</label>&nbsp;&nbsp;
+<input type="radio" name="gender" id="o" value="o">
+<label for="o">Others</label>
+</div>
+
+
+
+                    <label>Date of Birth</label>
+                    <input class="form-control" type="date" placeholder="Date of Birth" required="required" name="DOB" id="DOB"><br>
+                    <label>College Name</label>
+                    <input id="college" placeholder="College Name" required="required" class="form-control"><br>
+                    <input id="college" placeholder="Department" required="required" class="form-control"><br>
+
+                 <!--   <select class="form-control inhouse" required="required">
+                        <option selected="selected" value="cse">Computer Science & Engineering</option>
+                        <option value="ece">Electronics and Communication Engineering</option>
+                        <option value="ee">Civil Engineering</option>
+                        <option value="">Electrical Engineering</option>
+                        <option value="sash">School Of Applied Science</option>
+                        <option value="che">Chemical ENgineering</option>
+                        <option value="me">Mechanical Engineering</option>
+                        <option value="eie">Electronics & Instrumentation Eng.</option>
+                        <option value="ice">Instrumentation & Control Eng.</option>
+                        <option value="it">Information Technology</option>
+                        <option value="pe">Production Engineering</option>
+                        <option value="bt">Biotechnology</option>
+                        <option value="ft">Food Technology</option>
+
+                    </select><br>-->
+                                      <!--  <div class="abcdef">
+<label for="roll">Roll Number</label><br>
+                        <select type="dropdown" name="year" id="y" >
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                        </select>
+<label>&nbsp / &nbsp</label>
+<select id="d" type="dropdown" name="dpt" class="form-control-inline">
+    <option>CSE</option>
+    <option>ECE</option>
+    <option>CE</option>
+    <option>EE</option>
+    <option>CHE</option>
+    <option>ME</option>
+    <option>IT</option>
+    <option>ICE</option>
+    <option>AEIE</option>
+    <option>PE</option>
+    <option>BT</option>
+    <option>FT</option>
+</select>
+<label>&nbsp; /</label>&nbsp;
+                        <input class="form-control-inline" type="number" max="250">
+</div>--><input type="text" class="form-control" id="roll" name="roll" required="required" placeholder="Roll Number "><br>
+
+                    <input type="text" class="form-control" placeholder="College ID (Optional)" name="CID" id="CID"><br>
+                                        <label>T-Shirt Size</label>
+                    <select class="form-control" id="tshirt">
+                        <option value="XS" selected="selected">XS</option><br>
+                        <option value="S">S</option><br>
+                        <option value="M">M</option><br>
+                        <option value="L">L</option><br>
+                        <option value="XL">XL</option><br>
+                        <option value="XXL">XXL</option><br>
+                    </select><br>
+                    <button class="btn btn-lg btn-primary" style="width:550px; ">Submit</button>
+                </form>
+
+            <div class="col-md-2 col-lg-2 col-12">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+    </div>
+
+
+<script type="text/javascript">
+
+function outhouse() {
+ document.getElementById('main').innerHTML = document.getElementById('OUT').innerHTML;
+}
+function inhouse() {
+
+    document.getElementById('main').innerHTML = document.getElementById('IN').innerHTML;
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
