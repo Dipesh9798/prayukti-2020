@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-implicit-coercion */
 /* eslint-disable consistent-return */
 /* eslint-disable no-loop-func */
@@ -51,6 +52,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
+
 //GET ROUTE for Home
 
 app.get("/", (req, res) => {
@@ -84,7 +86,7 @@ app.post("/login", (req, res) => {
   var code = req.body.code;
   console.log(req.body);
 
-  var credential = firebase.auth.PhoneAuthProvider.credential(verification, code);
+  var credential = firebase.auth().PhoneAuthProvider.credential(verification, code);
   firebase.auth().signInAndRetrieveDataWithCredential(credential)
   .then(() =>{
     console.log("Signed from Backend in Succesfull");
@@ -110,20 +112,27 @@ app.get("/signup/hit", (req, res) => {
   res.redirect('/login_inhouse.html')
 });
 
+
+
+
+
+
 // app.post("/signup/hit1", (req, res) => {
   app.post("/signup/hit", (req, res) => {
-  console.log("gaandu");
+
+
+  var verification = req.body.verification;
+  var code = req.body.code;
+
+  firebase.auth().signInWithCredential(firebase.auth.PhoneAuthProvider.credential(verification,code))
+  .then(()=>{
+    console.log("Ghanta nai hoga");
+  })
+
+ /* console.log("gaandu");
   console.log(req.body);
   console.log("hii")
 
- 
-
-  //var verification =""+ ;
-  //var code =req.body.code;
-  //console.log(verify);
- // console.log(codes);
-
-  
   var mobile = req.body.mobile;
   var name = req.body.name;
   var email = req.body.email;
@@ -135,16 +144,20 @@ app.get("/signup/hit", (req, res) => {
   var college_code = req.body.CID;
   var tshirt_size = req.body.tshirt;
   //var t_shirt_type = req.body.t_shirt_type;
-  var user_profile_img = "";
+ // var user_profile_img = "";
+//var verify=req.body.verification;
 
-  var credential = firebase.auth.PhoneAuthProvider.credential(verify,code);
-  firebase.auth().signInWithCredential(credential)
-  .then(() =>{
-     console.log("Signed from Backend is Succesfull");
-    // res.redirect('/account');
 
-    //start posting to database 
+firebase.auth().signInWithPhoneNumber("+91"+mobile,recaptcha)
+.then(function(confirmationResult){
+  alert("message sent");
+  coderesult=confirmationResult;
 
+  var code=prompt("Enter your Otp");
+  coderesult.confirm(code)
+  .then(function(result){
+    var user=result.user;
+    console.log("something");
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
@@ -192,7 +205,7 @@ app.get("/signup/hit", (req, res) => {
                   .then(function() {
                     res.send({status: 200})
                     console.log("User Added to Database Succesfully");
-                    //res.redirect("/account");
+                    res.redirect("/");
                   })
                   .catch(function(error) {
                     console.error("Error writing document: ", error);
@@ -215,10 +228,34 @@ app.get("/signup/hit", (req, res) => {
         // ...
       }
     });
+  })
+  .catch(function(error){
+    alert("code wrong"+error.message);
   });
 
-
+  })
+  .catch(function(error){
+    alert("captch error"+error.message);
+  })
+  */
 });
+
+/*
+console.log(code+"  "+verify);
+  var credential = firebase.auth.PhoneAuthProvider.credential(verify,code);
+  console.log(credential);
+  firebase.auth().signInWithCredential(credential)
+  .then(() =>{
+    // console.log("Signed from Backend is Succesfull");
+    // res.redirect('/account');
+
+    //start posting to database 
+    //console.log(user);
+    //console.log(firebase.auth.currentUser);
+
+    
+
+});*/
 
 
 
@@ -739,8 +776,8 @@ app.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname + "/about.html"));
 });
 
-app.get("/events", (req, res) => {
-  res.sendFile(path.join(__dirname + "/events.html"));
+app.get("/event", (req, res) => {
+  res.sendFile(path.join(__dirname + "/event.html"));
 });
 
 app.get("/gallery", (req, res) => {
@@ -752,7 +789,7 @@ app.get("/team", (req, res) => {
 });
 
 app.get("/riviera", (req, res)=>{
-  res.sendFile(path.join(__dirname+"/riviera.html"));
+  res.sendFile(path.join(__dirname+"/riv.html"));
 });
 
 //GET ROUTE FOR EVENT DESCRIPTION

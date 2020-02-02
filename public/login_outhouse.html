@@ -7,95 +7,280 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/login.css">
     <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
-    
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
-	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
 
-	<script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript">
-    // Your web app's Firebase configuration
-    var Config = {
-      apiKey: "AIzaSyADZQRPKYxN9gbbkI_BzKQZm_0DwxAJtJQ",
-      authDomain: "prayukti2020-b7c3d.firebaseapp.com",
-      databaseURL: "https://prayukti2020-b7c3d.firebaseio.com",
-      projectId: "prayukti2020-b7c3d",
-      storageBucket: "prayukti2020-b7c3d.appspot.com",
-      messagingSenderId: "876252785433",
-      appId: "1:876252785433:web:69778553d22e6f5ddbf388",
-      measurementId: "G-W0W8BTD4DD"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(Config);
-  </script>
-   <script src="auth2.js">
-  </script>
+    <!--Bootstrap
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://mdbootstrap.com/docs/jquery/forms/inputs/">
+	End-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+	  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css" />
+
+	  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
+	  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+			// Your web app's Firebase configuration
+			var Config = {
+			  apiKey: "AIzaSyADZQRPKYxN9gbbkI_BzKQZm_0DwxAJtJQ",
+			  authDomain: "prayukti2020-b7c3d.firebaseapp.com",
+			  databaseURL: "https://prayukti2020-b7c3d.firebaseio.com",
+			  projectId: "prayukti2020-b7c3d",
+			  storageBucket: "prayukti2020-b7c3d.appspot.com",
+			  messagingSenderId: "876252785433",
+			  appId: "1:876252785433:web:69778553d22e6f5ddbf388",
+			  measurementId: "G-W0W8BTD4DD"
+			};
+			// Initialize Firebase
+      firebase.initializeApp(Config);
+     
+      var dbRootRef = firebase.firestore();
+    
+    </script>
+
+
+    <script  src="auth_outhouse.js">
+    </script>
+    
+    
+  
+    <!---<script src="app.js"></script>--->
 </head>
 <body>
+  <style type="text/css">
+    .card{
+      margin-left: 20%;
+      width: 60%;
+      border-color: red;
+      background-color: rgba(27, 41, 61, 0.5);
+     box-shadow: 10px 5px 5px #0c6af2;
+     border-width: 2px;
+     border-color: black;
+     margin-bottom: 5%;
+    }
 
-    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+    ::placeholder{
+  letter-spacing:2px;
+  color:#0c6af2;
+  margin-left: 25px;
+}
+
+
+    body{
+      background-color: #101925;
+      color: white;
+    }
+    .form-control{
+      width: 50%;
+
+      margin-bottom: 12px;
+      border-radius: 55px;
+      margin-left: 25%;padding: 2%;
+      border-color: #0c6af2;
+      background-color: rgba(12, 106, 242, 0.1);
+    }
+    .drop{
+      width:55%;
+      margin-bottom: 12px;
+      border-radius: 55px;
+      margin-left: 25%;padding: 2%;
+    }
+
+    .btn #button{
+      width: 35%;
+      margin-bottom: 12px;
+      border-radius: 55px;
+      margin-left: 30%;padding: 2%;
+      margin-bottom: 10px;
+    }
+    label{
+      margin-left: 27%;
+      font-size: 20px;
+      color: #0c6af2;
+
+    }
+
+    @media only screen and (max-width: 500px) {
+    .card{
+      margin-left: 5%;
+      width: 90%;
+      border-color: red;
+      background-color: rgba(27, 41, 61, 0.5);
+     box-shadow: 10px 5px 5px #0c6af2;
+     border-width: 2px;
+     border-color: black;
+     margin-bottom: 5%;
+    }
+
+    .form-control{
+      width: 80%;
+
+      margin-bottom: 12px;
+      border-radius: 55px;
+      margin-left: 10%;padding: 2%;
+      border-color: #0c6af2;
+      background-color: rgba(12, 106, 242, 0.1);
+    }
+    .drop{
+      width:85%;
+      margin-bottom: 12px;
+      border-radius: 55px;
+      margin-left: 10%;padding: 2%;
+    }
+
+    .btn #button{
+      width: 35%;
+      margin-bottom: 12px;
+      border-radius: 55px;
+      margin-left: 30%;padding: 2%;
+      margin-bottom: 10px;
+    }
+
+    label{
+      margin-left: 35%;
+      font-size: 20px;
+      color: #0c6af2;
+
+    }
+    select #gender{
+      width: 100%;
+    }
+  }
+
+
+  </style>
+
+    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar" id="navbar">
         <div class="container" >
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navMain" style="background:#dad7d7">
-    
+
+
         Menu <i class="fa fa-bars"></i>
-    
+
+        Menu <i class="fa fa-bars"></i>
+
         </button>
             <a href="#" style="color: #000000;text-decoration:none"><img style="max-width: 200px; max-height:auto; display: flex; opacity: 0.5;" src="img/newsky/white.png" alt="Prayukti"> </a>
           </div>
           <div class="collapse navbar-collapse" id="navMain">
             <ul class="nav navbar-nav pull-right">
-                                  <li><a class="navv home" href="index.html"><h5>Home</h5></a></li>
-                                  <li><a class="navv home" href="#home"><h5>About</h5></a></li>
-                                  <li><a class="navv home" href="events.html"><h5>Events</h5></a></li>
-                                  <li><a class="navv home" href="#home"><h5>Gallery</h5></a></li>
-                                  <li><a class="navv home" href="riviera.html"><h5>Riviera</h5></a></li>
-                                  <li><a style="left: 50px;" href="#home"><h5>Register&nbsp;|</h5></a></li>
-                                  <!--<li><a href="#about" class="navv about">About Us</a></li>
-    
+                                  <li><a class="navv home" href="/"><h5>Home</h5></a></li>
+                                  <li><a class="navv home" href="/about"><h5>About</h5></a></li>
+                                  <li><a class="navv home" href="/events"><h5>Events</h5></a></li>
+                                  <li><a class="navv home" href="/gallery"><h5>Gallery</h5></a></li>
+                                  <li><a class="navv home" href="/riviera"><h5>Riviera</h5></a></li>
+                                  <li><a style="left: 50px;" href="/signup"><h5>Register&nbsp;|</h5></a></li>
+                                <!--<li><a href="#about" class="navv about">About Us</a></li>
+<<<<<<< HEAD
+
               <li><a class="navv contact">Contact Us</a></li>
                               </ul>-->
+
           </div>
-          
+
         </div>
       </div>
-    
 
-      <!----<form class="login">
-        <input type="username" placeholder="PHONE NUMBER">
-        <input type="username" placeholder="OTP">
-        <button >LOGIN</button>
-        </form>----->
-      
-        <div class="login">
+
+
+
+     <!-- </div>
+      </div>-->
+
+
+     <!----- <div class="login">
 
           <div id="beforeotp">
-            <input type="username" name="mobile" id="number" placeholder="PHONE NUMBER">
-            <div id="r1"></div>
-            <button id="b1" class="m-1" style="display: none;" onclick="otpb()" type="submit">SEND OTP</button>
+            <input type="username" placeholder="PHONE NUMBER">
+            <button id="b1" onclick="otpb()" type="submit">SEND OTP</button>
           </div>
-  
-          
-         
-        
-          <div id="otp" style="display: none;">
-              <input type="username" name="code" id="code" placeholder="OTP">
-              <button type="submit"  id="b2" onclick="codeVerify()" >LOGIN</button>
+
+          <div id="otp">
+              <input type="username" placeholder="OTP">
+              <button type="submit" id="b2" >LOGIN</button>
           </div>
       </div>
-     
+
+      <script src="js/login.js"></script>
+
+      <script src="/Frontend/js/login.js"></script>--->
+      <div id="login1" style="display:block;">
+           <div class="login" id="login" style="display: block;">
+
+        <div id="beforeotp" style="display: block;">
+          <input type="username" name="mobile" id="number" placeholder="PHONE NUMBER">
+          <div id="r1"></div>
+          <button id="b1" class="m-1" onclick="sendOTP()" type="submit">SEND OTP</button>
+        </div>
+
+        
+       
       
-      <script >
-        function otpb(){
-          phoneAuth();
-          document.getElementById("otp").style.display ="block";
-  
-          document.getElementById("beforeotp").style.display ="none";
-  
-          document.getElementById("b1").style.display ="none";
-         
-        }
-      </script>
+        <div id="otp" style="display:none;">
+            <input type="username" name="code" id="code" placeholder="OTP">
+            <button type="submit"  id="b2" onclick="codeVerify()" >LOGIN</button>
+        </div>
+    </div>
+  </div>
+
+
+    <div class="container" id="inhouse" style="display: none;">
+     
+      <div class="card" id="IN" style="margin-top: 7%; overflow-x: hidden;"> 
+        <div class="card-details" >
+           <h2 style="text-align:center; color:#06caf2">Out-House Registration</h2><br>
+            <form method="POST">
+                <input class="form-control" placeholder="Name" required="required" name="name" id="name" type="text" onchange="checkFilled(id);">
+                <input class="form-control" placeholder="Email" required="required" name="email" id="email" type="email" onchange="checkFilled(id);">
+                <input class="form-control" placeholder="Mobile Number" required="required" name="mobile" id="mobile" type="tel" onchange="checkFilled(id);" maxlength="10" minlength="10">
+                <label id="title">Gender</label>
+                <select class="form-control" id="gender" name="gender" style="color: #0c6af2; width: 55%;" required="required" onchange="checkFilled(id);">
+                  <option value="m">Male</option>
+                  <option value="f">Female</option>
+                  <option value="o">Others</option>
+                </select>
+                <label>Date of Birth</label>
+                <input class="form-control" type="date" placeholder="Date of Birth" required="required" name="DOB" id="DOB" onchange="checkFilled(id);" style="color: #0c6af2"><br>
+                
+                <input id="college" name="college" placeholder="College name" required="required" class="form-control " type="text" onchange="checkFilled(id);"><br>
+                <input id="dept" name="dept" placeholder="Department" required="required" class="form-control " type="text" onchange="checkFilled(id);"><br>
+
+                <input type="text" class="form-control" id="roll" name="roll" required="required" placeholder="Roll Number e.g.(18/CSE/111)" onchange="checkFilled(id);"><br>
+
+                <input type="text" class="form-control" placeholder="College ID (Optional)" name="CID" id="CID" onchange="checkFilled(id);"><br>
+                <label>T-Shirt Size</label>
+                <select class="form-control drop" name="tshirt" id="tshirt" required="required" style="color: #0c6af2" onchange="checkFilled(id);" >
+                                            <option value="XS" selected="selected">T-Shirt Size</option><br>
+                    <option value="S">S</option><br>
+                    <option value="M">M</option><br>
+                    <option value="L">L</option><br>
+                    <option value="XL">XL</option><br>
+                    <option value="XXL">XXL</option><br>
+                </select><br>
+                <div id="r1"></div>
+                <button class="btn btn-lg form-control " style="background-color: #0ceaf2; width: 30%; margin-left: 35%; margin-top: 15px; margin-bottom: 25px" id="button" onclick="registerUser()" type="submit"><strong>Submit</strong></button>
+            </form>
+    </div>
+</div>
+  </div>
+    <script type="text/javascript">
+      function checkFilled(id) {
+       var inputVal = document.getElementById(id);
+       if (inputVal.value == "") {
+           inputVal.style.backgroundColor = "rgba(12, 106, 242, 0.1)";
+       }
+       else{
+           inputVal.style.backgroundColor = "rgba(255, 255, 255, 0.75)";
+       }
+   }
+   
+   checkFilled();
+   </script>
 </body>
 </html>

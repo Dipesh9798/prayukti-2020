@@ -86,7 +86,7 @@ app.post("/login", (req, res) => {
   var code = req.body.code;
   console.log(req.body);
 
-  var credential = firebase.auth.PhoneAuthProvider.credential(verification, code);
+  var credential = firebase.auth().PhoneAuthProvider.credential(verification, code);
   firebase.auth().signInAndRetrieveDataWithCredential(credential)
   .then(() =>{
     console.log("Signed from Backend in Succesfull");
@@ -270,7 +270,7 @@ app.get("/signup/other", (req, res) => {
 //POST ROUTE for sigup for Other Students
 
 app.post("/signup/other", (req, res) => {
-  var mobile = req.body.mobile;
+  /*var mobile = req.body.mobile;
   var name = req.body.name;
   var college_name = req.body.college_name;
   var college_roll = req.body.college_roll;
@@ -347,7 +347,7 @@ app.post("/signup/other", (req, res) => {
             console.log(error);
           });
       }
-    });
+    });*/
 });
 
 app.get("/account", (req, res) => {
@@ -776,8 +776,8 @@ app.get("/about", (req, res) => {
   res.sendFile(path.join(__dirname + "/about.html"));
 });
 
-app.get("/events", (req, res) => {
-  res.sendFile(path.join(__dirname + "/events.html"));
+app.get("/event", (req, res) => {
+  res.sendFile(path.join(__dirname + "/event.html"));
 });
 
 app.get("/gallery", (req, res) => {
@@ -789,7 +789,7 @@ app.get("/team", (req, res) => {
 });
 
 app.get("/riviera", (req, res)=>{
-  res.sendFile(path.join(__dirname+"/riviera.html"));
+  res.sendFile(path.join(__dirname+"/riv.html"));
 });
 
 //GET ROUTE FOR EVENT DESCRIPTION
