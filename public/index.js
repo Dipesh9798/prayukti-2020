@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 /* eslint-disable no-implicit-coercion */
 /* eslint-disable consistent-return */
 /* eslint-disable no-loop-func */
@@ -50,7 +49,6 @@ console.log("path");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 
 
 //GET ROUTE for Home
@@ -112,27 +110,20 @@ app.get("/signup/hit", (req, res) => {
   res.redirect('/login_inhouse.html')
 });
 
-
-
-
-
-
 // app.post("/signup/hit1", (req, res) => {
   app.post("/signup/hit", (req, res) => {
-
-
-  var verification = req.body.verification;
-  var code = req.body.code;
-
-  firebase.auth().signInWithCredential(firebase.auth.PhoneAuthProvider.credential(verification,code))
-  .then(()=>{
-    console.log("Ghanta nai hoga");
-  })
-
- /* console.log("gaandu");
+  console.log("gaandu");
   console.log(req.body);
   console.log("hii")
 
+ 
+
+  //var verification =""+ ;
+  //var code =req.body.code;
+  //console.log(verify);
+ // console.log(codes);
+
+  
   var mobile = req.body.mobile;
   var name = req.body.name;
   var email = req.body.email;
@@ -144,20 +135,16 @@ app.get("/signup/hit", (req, res) => {
   var college_code = req.body.CID;
   var tshirt_size = req.body.tshirt;
   //var t_shirt_type = req.body.t_shirt_type;
- // var user_profile_img = "";
-//var verify=req.body.verification;
+  var user_profile_img = "";
 
+  var credential = firebase.auth.PhoneAuthProvider.credential(verify,code);
+  firebase.auth().signInWithCredential(credential)
+  .then(() =>{
+     console.log("Signed from Backend is Succesfull");
+    // res.redirect('/account');
 
-firebase.auth().signInWithPhoneNumber("+91"+mobile,recaptcha)
-.then(function(confirmationResult){
-  alert("message sent");
-  coderesult=confirmationResult;
+    //start posting to database 
 
-  var code=prompt("Enter your Otp");
-  coderesult.confirm(code)
-  .then(function(result){
-    var user=result.user;
-    console.log("something");
     firebase.auth().onAuthStateChanged(function(user) {
       if (user) {
         // User is signed in.
@@ -205,7 +192,7 @@ firebase.auth().signInWithPhoneNumber("+91"+mobile,recaptcha)
                   .then(function() {
                     res.send({status: 200})
                     console.log("User Added to Database Succesfully");
-                    res.redirect("/");
+                    //res.redirect("/account");
                   })
                   .catch(function(error) {
                     console.error("Error writing document: ", error);
@@ -228,34 +215,10 @@ firebase.auth().signInWithPhoneNumber("+91"+mobile,recaptcha)
         // ...
       }
     });
-  })
-  .catch(function(error){
-    alert("code wrong"+error.message);
   });
 
-  })
-  .catch(function(error){
-    alert("captch error"+error.message);
-  })
-  */
+
 });
-
-/*
-console.log(code+"  "+verify);
-  var credential = firebase.auth.PhoneAuthProvider.credential(verify,code);
-  console.log(credential);
-  firebase.auth().signInWithCredential(credential)
-  .then(() =>{
-    // console.log("Signed from Backend is Succesfull");
-    // res.redirect('/account');
-
-    //start posting to database 
-    //console.log(user);
-    //console.log(firebase.auth.currentUser);
-
-    
-
-});*/
 
 
 
