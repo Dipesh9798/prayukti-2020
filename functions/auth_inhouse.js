@@ -57,6 +57,8 @@ function codeVerify(){
   .then(function(result){
     var user=result.user;
     console.log("Logged In");
+    
+
     alert("Proceed to Fill the Form");
     document.getElementById('otp').style.display="none";
     document.getElementById('inhouse').style.display="block";

@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/dash.css">
-    
-    <script src="dash.js"></script>
-  
+   
+  <script src="dash.js"></script>
   </head>
   <body>
     <aside class="side-nav" id="show-side-navigation1">
@@ -22,11 +21,11 @@
 
           
           <ul class = "categories" >
-           <li> ID <div id="id">  </div> </li> 
-           <li> COLLEGE<div id="college">  </div></li>           
-           <li>  ROLL<div id="roll"> </div></li>         
-           <li> T-SHIRT  <div id="tshirt"></div></li>           
-           <li> TOTAL COST  <div id="cost"></div></li>  
+           <li> <div id="id"> ID  </div> </li> 
+           <li> <div id="college"> COLLEGE </div></li>           
+           <li>  <div id="roll"> ROLL</div></li>         
+           <li>  <div id="tshirt">T-SHIRT</div></li>           
+           <li> <div id="cost">TOTAL COST</div></li>  
            <li> <i class="fa fa-bolt fa-fw"></i><a href="#"> SELECTED EVENTS</a>
             <ul class="side-nav-dropdown">
               <li><a href="#">Currently No Events are selected</a></li>
@@ -791,6 +790,39 @@
 
 
       </section>
+      <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="/__/firebase/7.7.0/firebase-app.js"></script>
+  
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+               https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="/__/firebase/7.7.0/firebase-analytics.js"></script>
+      <script src="/__/firebase/7.7.0/firebase-auth.js"></script>
+      <script src="/__/firebase/7.7.0/firebase-firestore.js"></script>
+      <script src="/__/firebase/7.7.0/firebase-hosting.js"></script>
+  
+      <!-- Initialize Firebase -->
+      <script src="/__/firebase/init.js"></script>
+    
+  
+      <script src="text/javascript">
+      var Config = {
+      apiKey: "AIzaSyADZQRPKYxN9gbbkI_BzKQZm_0DwxAJtJQ",
+      authDomain: "prayukti2020-b7c3d.firebaseapp.com",
+      databaseURL: "https://prayukti2020-b7c3d.firebaseio.com",
+      projectId: "prayukti2020-b7c3d",
+      storageBucket: "prayukti2020-b7c3d.appspot.com",
+      messagingSenderId: "876252785433",
+      appId: "1:876252785433:web:69778553d22e6f5ddbf388",
+      measurementId: "G-W0W8BTD4DD"
+      };
+    
+    firebase.initializeApp(Config);
+    
+    var dbRootRef = firebase.firestore();
+  
+    </script>
+  
       <script src='http://code.jquery.com/jquery-latest.js'></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
@@ -799,4 +831,4 @@
       <script src='js/func.js'></script>  
     </body>
 
-    </html>
+</html>
