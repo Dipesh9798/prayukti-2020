@@ -131,7 +131,7 @@ function registerUser(){
             .then(function() {
              // res.send({status: 200})
               console.log("User Added to Database Succesfully");
-              window.location.href="/";
+              window.location.href="/Dash/Dash.html";
             })
             .catch(function(error) {
               console.error("Error writing document: ", error);

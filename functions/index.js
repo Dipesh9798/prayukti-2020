@@ -68,11 +68,11 @@ app.get("/login", (req, res) => {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      res.redirect("/account");
+      res.redirect("/");
     } else {
       // No user is signed in.
       // eslint-disable-next-line no-path-concat
-      res.sendFile(path.join(__dirname + "/login.html"));
+      res.redirect('/login.html');
     }
   });
 });
@@ -82,19 +82,24 @@ app.get("/login", (req, res) => {
 
 app.post("/login", (req, res) => {
  // var mobile = req.body.mobile;
-  var verification = req.body.verification;
-  var code = req.body.code;
-  console.log(req.body);
+  /*var verification = req.body.verification;
+  var code = req.body.code;*/
+  //console.log(req.body);
+
+  /*var id1=prompt("hold")
 
   var credential = firebase.auth().PhoneAuthProvider.credential(verification, code);
+  var id2=prompt("hold")
   firebase.auth().signInAndRetrieveDataWithCredential(credential)
   .then(() =>{
+    var id3=prompt("hold")*/
     console.log("Signed from Backend in Succesfull");
-    res.redirect('/account');
-  })
-  .catch(err =>{
-    console.log("err "+err);
-  });
+    res.redirect('/');
+  //})
+  //.catch(err =>{
+    //console.log("err "+err);
+    var id4=prompt("Error")
+  //});
   
 });
 
@@ -270,7 +275,7 @@ app.get("/signup/other", (req, res) => {
 //POST ROUTE for sigup for Other Students
 
 app.post("/signup/other", (req, res) => {
-  /*var mobile = req.body.mobile;
+  var mobile = req.body.mobile;
   var name = req.body.name;
   var college_name = req.body.college_name;
   var college_roll = req.body.college_roll;
@@ -347,7 +352,7 @@ app.post("/signup/other", (req, res) => {
             console.log(error);
           });
       }
-    });*/
+    });
 });
 
 app.get("/account", (req, res) => {

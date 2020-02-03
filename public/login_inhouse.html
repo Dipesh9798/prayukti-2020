@@ -238,7 +238,7 @@
             <form method="POST">
                 <input class="form-control" placeholder="Name" required="required" name="name" id="name" type="text" onchange="checkFilled(id);">
                 <input class="form-control" placeholder="Email" required="required" name="email" id="email" type="email" onchange="checkFilled(id);">
-                <input class="form-control" placeholder="Mobile Number" required="required" name="mobile" id="mobile" type="tel" onchange="checkFilled(id);" maxlength="10" minlength="10">
+                <input  placeholder="Mobile Number" required="required" name="mobile" id="mobile" type="tel" class="form-control disabled" disabled onchange="checkFilled(id);" maxlength="10" minlength="10">
                 <label id="title">Gender</label>
                 <select class="form-control" id="gender" name="gender" style="color: #0c6af2; width: 55%;" required="required" onchange="checkFilled(id);">
                   <option value="m">Male</option>

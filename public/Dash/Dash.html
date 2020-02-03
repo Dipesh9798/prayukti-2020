@@ -1,0 +1,802 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/dash.css">
+    
+    <script src="dash.js"></script>
+  
+  </head>
+  <body>
+    <aside class="side-nav" id="show-side-navigation1">
+      <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+      <div class="heading">
+        <img src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt="">
+        <div class="info">
+          <h3 style="margin-top: 17px;"><a href="#"><!--NAME HERE--> <div class="name" id="name">Name</div></a></h3>
+        </div>
+      </div>
+
+          
+          <ul class = "categories" >
+           <li> ID <div id="id">  </div> </li> 
+           <li> COLLEGE<div id="college">  </div></li>           
+           <li>  ROLL<div id="roll"> </div></li>         
+           <li> T-SHIRT  <div id="tshirt"></div></li>           
+           <li> TOTAL COST  <div id="cost"></div></li>  
+           <li> <i class="fa fa-bolt fa-fw"></i><a href="#"> SELECTED EVENTS</a>
+            <ul class="side-nav-dropdown">
+              <li><a href="#">Currently No Events are selected</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+              <li><a href="#"></a></li>
+            </ul>
+          </li> 
+          </ul>
+        </div>
+      </div>
+     
+    </aside>
+    <section id="contents">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <i class="fa fa-align-right"></i>
+            </button>
+            <a class="navbar-brand" href="#">Prayukti <span class="main-color">2020</span></a>
+          </div>
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
+                  <!--link it to team.html in the frontend--><li><a href="team.html"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn" style="margin-top:17px"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="welcome">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="content">
+                <h2>Welcome to Dashboard</h2>
+                <p>COST-BREAKDOWN:
+                  <br>
+                  <h6>   BASE-COST:          Rs.550/-<br>
+                         COST PER EVENT:     Rs.100/-
+                  </h6>
+                  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!----------accordian struct here---------->
+
+<section>
+
+  
+ <!-- Parent Container -->
+ 
+<div class="container">
+  
+  <!-- BEGIN Accordion Button-->
+
+  <button class="accordion">EVENTS</button>
+  <!-- Accordion Content Container -->
+  <div class="accordion-content">
+      <!-- Accordion INNER Content Container -->
+     
+      <div class="accordion-inner webkit-scrollbar">
+    
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h3>Event Name</h3> 
+                    <p>Content</p> 
+                
+        
+                    
+                      <button id="add1"><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                      <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                    </i>
+                      </button>
+                    
+                    </div>
+         
+            
+            
+          </div>
+        
+        </div>
+        
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+                    <p>Content</p> 
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+              <p>Content</p> 
+              <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+              <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+            </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h3>Event Name</h3> 
+                    <p>Content</p> 
+                
+        
+                    
+                      <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                      <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                    </i>
+                      </button>
+                    
+                    </div>
+         
+            
+            
+          </div>
+        
+        </div>
+        
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+                    <p>Content</p> 
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+              <p>Content</p> 
+              <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+              <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+            </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h3>Event Name</h3> 
+                    <p>Content</p> 
+                
+        
+                    
+                      <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                      <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                    </i>
+                      </button>
+                    
+                    </div>
+         
+            
+            
+          </div>
+        
+        </div>
+        
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+                    <p>Content</p> 
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+              <p>Content</p> 
+              <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+              <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+            </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h3>Event Name</h3> 
+                    <p>Content</p> 
+                
+        
+                    
+                      <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                      <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                    </i>
+                      </button>
+                    
+                    </div>
+         
+            
+            
+          </div>
+        
+        </div>
+        
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+                    <p>Content</p> 
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/img.JPG" alt="Avatar">
+            </div>
+            <div class="flip-card-back">
+              <h1>Event Name</h1> 
+              <p>Content</p> 
+              <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                    
+        
+              <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+            </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      
+
+</div>
+
+
+
+
+
+
+      <!-- // Accordion INNER Content Container -->
+  </div>
+ <!-- // Accordion Content Container -->
+ 
+ <!-- // END Accordion Button-->
+
+
+ <!-- BEGIN Accordion Button-->
+
+  <button class="accordion">YANTRIKI</button>
+  <!-- Accordion Content Container -->
+  <div class="accordion-content">
+      <!-- Accordion INNER Content Container -->
+    <div class="accordion-inner webkit-scrollbar">
+    
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/img.JPG" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h3>Event Name</h3> 
+            <p>Content</p> 
+        
+
+            
+              <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+            
+
+              <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+            </i>
+              </button>
+            
+            </div>
+ 
+    
+    
+  </div>
+
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/img.JPG" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h1>Event Name</h1> 
+            <p>Content</p> 
+            <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+            
+
+            <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+          </i>
+            </button>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/img.JPG" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h1>Event Name</h1> 
+      <p>Content</p> 
+      <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+            
+
+      <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+    </i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/img.JPG" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h3>Event Name</h3> 
+            <p>Content</p> 
+        
+
+            
+              <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+            
+
+              <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+            </i>
+              </button>
+            
+            </div>
+ 
+    
+    
+  </div>
+
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/img.JPG" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h1>Event Name</h1> 
+            <p>Content</p> 
+            <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+            
+
+            <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+          </i>
+            </button>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img/img.JPG" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h1>Event Name</h1> 
+      <p>Content</p> 
+      <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+            
+
+      <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+    </i>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+      
+ </div>
+      <!-- // Accordion INNER Content Container -->
+  </div>
+ <!-- // Accordion Content Container -->
+ 
+ <!-- // END Accordion Button-->
+
+ <!-- BEGIN Accordion Button-->
+
+ <button class="accordion">RANBHOOMI</button>
+ <!-- Accordion Content Container -->
+ <div class="accordion-content">
+     <!-- Accordion INNER Content Container -->
+     <div class="accordion-inner webkit-scrollbar">
+    
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h3>Event Name</h3> 
+                  <p>Content</p> 
+              
+      
+                  
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+                  
+                  </div>
+       
+          
+          
+        </div>
+      
+      </div>
+      
+      
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h1>Event Name</h1> 
+                  <p>Content</p> 
+                  <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+                  <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                </i>
+                  </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h1>Event Name</h1> 
+            <p>Content</p> 
+            <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+            <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+          </i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!---<div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h1>Event Name</h1> 
+            <p>Content</p> 
+            <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+            <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+          </i>
+            </button>
+          </div>
+        </div>
+      </div>--->
+      
+      
+      
+      
+      
+            
+       </div>
+     <!-- // Accordion INNER Content Container -->
+ </div>
+<!-- // Accordion Content Container -->
+
+<!-- // END Accordion Button-->
+
+ <!-- BEGIN Accordion Button-->
+
+ <button class="accordion">FRAME TO FRAME</button>
+ <!-- Accordion Content Container -->
+ <div class="accordion-content">
+     <!-- Accordion INNER Content Container -->
+     <div class="accordion-inner webkit-scrollbar">
+    
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h3>Event Name</h3> 
+                  <p>Content</p> 
+              
+      
+                  
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+                  
+                  </div>
+       
+          
+          
+        </div>
+      
+      </div>
+      
+      
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h1>Event Name</h1> 
+                  <p>Content</p> 
+                  <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+                  <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                </i>
+                  </button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+</div>
+     <!-- // Accordion INNER Content Container -->
+ </div>
+<!-- // Accordion Content Container -->
+
+<!-- // END Accordion Button-->
+
+ <!-- BEGIN Accordion Button-->
+
+ <button class="accordion">SAUDAGAR</button>
+ <!-- Accordion Content Container -->
+ <div class="accordion-content">
+     <!-- Accordion INNER Content Container -->
+     <div class="accordion-inner webkit-scrollbar">
+    
+
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h3>Event Name</h3> 
+                  <p>Content</p> 
+              
+      
+                  
+                    <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+                    <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                  </i>
+                    </button>
+                  
+                  </div>
+       
+          
+          
+        </div>
+      
+      </div>
+      
+      
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="img/img.JPG" alt="Avatar">
+          </div>
+          <div class="flip-card-back">
+            <h1>Event Name</h1> 
+                  <p>Content</p> 
+                  <button id="add1" ><i class="fa fa-plus-circle fa-2x" aria-hidden="false" ></i></button>
+                  
+      
+                  <button id="rem1"><i class="fa fa-minus-circle fa-2x" aria-hidden="false">
+                </i>
+                  </button>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+
+     <!-- // Accordion INNER Content Container -->
+ </div>
+<!-- // Accordion Content Container -->
+
+<!-- // END Accordion Button-->
+ <!-- BEGIN Accordion Button-->
+<!--
+ <button class="accordion">ON-STAGE</button>
+ Accordion Content Container -->
+ 
+<!--//  Parent Container -->
+
+</div>
+
+
+
+</section>
+      
+<!----------->
+
+
+<section class='statis text-center'>
+  <div class="container-fluid">
+    <div class="row"></div>
+    <div class="col-md-3">
+      <div class="box warning">
+        <i class="fa fa-shopping-cart"></i>
+        <h3>Rs. 630/-</h3>
+        <p class="lead">Your Total Cost</p>
+      </div>
+    </div>
+  
+
+    <div class="col-md-3">
+  
+      <div class="box warning">
+        <button id="pay">
+        <i class="fa fa-credit-card" aria-hidden="true"></i>
+        <h3>Checkout</h3>
+        <p class="lead">Head to payment</p>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</section>
+
+
+      </section>
+      <script src='http://code.jquery.com/jquery-latest.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+      <script src='js/dash.js'></script>
+      <script src='js/dash_acc.js'></script>  
+      <script src='js/func.js'></script>  
+    </body>
+
+    </html>

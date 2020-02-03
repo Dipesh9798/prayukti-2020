@@ -85,12 +85,12 @@ function registerUser(){
       console.log(user_uid);
      // var id=prompt("gaandu");
 
-  var mobile = document.getElementById('mobile').value;
+  var mobile =document.getElementById('number').value;
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
   var gender=document.getElementById('gender').value;
   var dob=document.getElementById('DOB').value;
-  var college_name = document.getElementById('college').value;
+  var college_name = "Haldia Institute of Technology";
   var dept=document.getElementById('dept').value;
   var college_roll = document.getElementById('roll').value;
   var college_code = document.getElementById('CID').value;
@@ -131,7 +131,7 @@ function registerUser(){
             .then(function() {
              // res.send({status: 200})
               console.log("User Added to Database Succesfully");
-              window.location.href="/";
+              window.location.href="/Dash/Dash.html";
             })
             .catch(function(error) {
               console.error("Error writing document: ", error);
@@ -140,8 +140,9 @@ function registerUser(){
         }
         else{
           //user alreday exist in database 
-          res.send({status :400 , errorMessage : "User already exist in database"})
-          }
+          //res.send({status :400 , errorMessage : "User already exist in database"})
+          res.render('/Dash/Dash.html')
+        }
 
   })
   .catch(err =>{
@@ -153,7 +154,7 @@ function registerUser(){
 } else {
 // User is signed out.
 // ...
-console.log("user alrealdy signed out");
+console.log("user already signed out");
 }
 })
 event.preventDefault();
