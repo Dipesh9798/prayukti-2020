@@ -72,7 +72,7 @@ app.get("/login", (req, res) => {
     } else {
       // No user is signed in.
       // eslint-disable-next-line no-path-concat
-      res.redirect('/login.html');
+      res.redirect('/registration.html');
     }
   });
 });
@@ -82,24 +82,24 @@ app.get("/login", (req, res) => {
 
 app.post("/login", (req, res) => {
  // var mobile = req.body.mobile;
-  var verification = req.body.verification;
-  var code = req.body.code;
+  /*var verification = req.body.verification;
+  var code = req.body.code;*/
   //console.log(req.body);
 
-  var id1=prompt("hold")
+  /*var id1=prompt("hold")
 
   var credential = firebase.auth().PhoneAuthProvider.credential(verification, code);
   var id2=prompt("hold")
   firebase.auth().signInAndRetrieveDataWithCredential(credential)
   .then(() =>{
-    var id3=prompt("hold")
+    var id3=prompt("hold")*/
     console.log("Signed from Backend in Succesfull");
     res.redirect('/');
-  })
-  .catch(err =>{
-    console.log("err "+err);
-    var id4=prompt("hold!")
-  });
+  //})
+  //.catch(err =>{
+    //console.log("err "+err);
+    var id4=prompt("Error")
+  //});
   
 });
 

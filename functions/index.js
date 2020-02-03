@@ -72,7 +72,7 @@ app.get("/login", (req, res) => {
     } else {
       // No user is signed in.
       // eslint-disable-next-line no-path-concat
-      res.redirect('/login.html');
+      res.redirect('/registration.html');
     }
   });
 });
