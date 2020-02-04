@@ -292,7 +292,7 @@ console.log("user already signed out");
 event.preventDefault();
 }*/
 
-console.log(localStorage.getItem("usr"))
+//console.log(localStorage.getItem("usr"))
 
 function dashrender(){
   //console.log("inside dashboard")
@@ -309,18 +309,36 @@ function dashrender(){
             //console.log(user.user_name)
             console.log(firebase.auth().currentUser.uid)
             //console.log(getUserName())
-            const db = firebase.firestore()
-            db.collection('inhouse_database').get().then((snapshot)=>{
+            //const db = firebase.firestore()
+            /*dbRootRef.collection('inhouse_database').get().then((snapshot)=>{
               snapshot.docs.forEach(doc => {
                 console.log(doc.data());
                 document.getElementById('name').value=doc.data().user_name
               })
+            })*/
+            firebase.firestore().collection('inhouse_database').doc(user_uid).get()
+            .then(doc=>{
+              if(doc.exists){
+                console.log(doc.data());
+                let values=doc.data();
+
+                document.getElementById('college').innerHTML=values.user_college;
+                document.getElementById('name').innerHTML=values.user_name;
+                document.getElementById('roll').innerHTML=values.user_roll;
+                document.getElementById('tshirt').innerHTML=values.tshirt_size;
+                document.getElementById('id').innerHTML='H'+values.user_mobile;
+                //document.getElementById('tshirt').innerHTML=values.us;
+              }
+
+              else{
+                alert("server side error");
+              }
             })
 
     }
     else
     {
-      alert("Server side error");
+      alert("error");
     }
   })
 }
