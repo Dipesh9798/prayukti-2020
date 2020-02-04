@@ -64,7 +64,7 @@ function codeVerify(){
       .then( doc =>{
         if(doc.exists){
             console.log("Logged In");
-            window.location.href="/Dash/Dash.html";
+            window.location.href="/Dash_inhouse/Dash.html";
             //console.log(doc.data());
             console.log("chu");
             console.log(doc.data().user_name);
@@ -151,7 +151,7 @@ function codeVerify(){
             .then(function() {
              // res.send({status: 200})
               console.log("User Added to Database Succesfully");
-              window.location.href="/Dash/Dash.html";
+              window.location.href="/Dash_inhouse/Dash.html";
               console.log(doc.data());
 
 
