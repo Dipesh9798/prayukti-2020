@@ -321,6 +321,14 @@ function dashrender(){
               if(doc.exists){
                 console.log(doc.data());
                 let values=doc.data();
+                if(user_uid.gender==='m')
+                {
+                    document.getElementById('image').src="../img/male.png";
+                }
+                else
+                {
+                    document.getElementById('image').src="../img/female.png";
+                }
 
                 document.getElementById('college').innerHTML=values.user_college;
                 document.getElementById('name').innerHTML=values.user_name;

@@ -794,7 +794,7 @@ app.get("/team", (req, res) => {
 });
 
 app.get("/riviera", (req, res)=>{
-  res.sendFile(path.join(__dirname+"/riv.html"));
+  res.render('/riv.html');
 });
 
 //GET ROUTE FOR EVENT DESCRIPTION
