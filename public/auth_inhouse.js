@@ -65,6 +65,10 @@ function codeVerify(){
         if(doc.exists){
             console.log("Logged In");
             window.location.href="/Dash/Dash.html";
+            //console.log(doc.data());
+            console.log("chu");
+            console.log(doc.data().user_name);
+            console.log(doc.get('user_name'));
         }
            else
            {
@@ -148,6 +152,7 @@ function codeVerify(){
              // res.send({status: 200})
               console.log("User Added to Database Succesfully");
               window.location.href="/Dash/Dash.html";
+              console.log(doc.data());
 
 
             })
@@ -301,15 +306,16 @@ function dashrender(){
             var user_uid=user.uid;
             console.log(user_uid)
             console.log(user)
-            console.log(user.user_name)
+            //console.log(user.user_name)
             console.log(firebase.auth().currentUser.uid)
-      dbRootRef.collection('inhouse_database').doc(user_uid).get()
-      .then(doc=>{
-        if(doc.exists)
-        console.log(doc.data());
-        else
-        console.log("some error in fetching");
-      })
+            //console.log(getUserName())
+            const db = firebase.firestore()
+            db.collection('inhouse_database').get().then((snapshot)=>{
+              snapshot.docs.forEach(doc => {
+                console.log(doc.data());
+                document.getElementById('name').value=doc.data().user_name
+              })
+            })
 
     }
     else
